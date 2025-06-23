@@ -1,0 +1,45 @@
+import random
+import time
+name1=input("Enter your name:")
+name2=input("Enter your name:")
+nums=[]
+while(len(nums)<5):
+    d=random.randint(1,10)
+    if(d in nums):
+        continue
+    else:
+        nums.append(d)
+print("------------------------")
+print("Computer has five numbers in mind for 1 to 10")
+print("Your have 3 turns")
+player1=[]
+player2=[]
+s1=0
+s2=0
+for i in range(3):
+    print("--->>turn{}<<----",format(i+1))
+    a=int(input("Hi{}---->Turn{} predict".format(name1,(i+1))))
+    if(a in nums):
+        print("-->CORRECT")
+        s1=s1+1
+    else:
+        print("-->WRONG")
+    b=int(input("Hi{}---->Turn{} predict".format(name2,(i+1))))
+    if(b in nums):
+        print("-->CORRECT")
+        s2=s2+1
+print("-----------------------")
+print("lets see the summary")
+print("Computer has fixed number",nums)
+print("Player1 has choosen: ",player1)
+print("His Score",s1)
+print("Player has choosen :",player2)
+print("His score",s2)
+time.sleep(5)
+if(s1>s2):
+    print("Player{} WINNER".format(name1))
+elif(s2>s1):
+    print("Player{} WINNER".format(name2))
+else:
+    print("-->DRAW<--")
+    
