@@ -1,0 +1,23 @@
+name=["A","B","C","D","E","F","G","H","I","J"]
+memo=[0,1,1,1,2,2,1,2,1,2]
+salary=[1000,2000,3000,4500,2000,5000,1500,2300,1300,1100]
+
+data=list(zip(name,memo,salary))
+removed=[i for i in data if i[2]>4000]
+remaining=[i for i in data if i[2]<=4000]
+remaining.sort(key=lambda x:x[2],reverse=True)
+toremoved=[]
+for i in remaining:
+    if (i[1]>1):
+        toremoved.append(i)
+    if(len(toremoved)==3):
+        break
+res=toremoved+removed
+pos=1
+for i in res:
+    print("{}. removed {} his salary is {} and memo are {}".format(pos,i[0],i[2],i[1]))
+    pos=pos+1
+
+    
+    
+
