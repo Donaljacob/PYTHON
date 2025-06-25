@@ -1,0 +1,37 @@
+def cricle():
+    r=int(input("Enter the radius :"))
+    res=3.14*r**2
+    print("Area is", res)
+def sq(a):
+    res=a**2
+    print("Area is ",res)
+def rect():
+    l=int(input("Enter the len :"))
+    b=int(input("Enter of bre :"))
+    return(l*b)
+def tri():
+    return(0.5*l*b)
+    
+while(True):
+    print("1.CIRCLE")
+    print("2.SQUARE")
+    print("3.RECTANGLE")
+    print("4.TRIANGLE")
+    ch=int(input("Enter Your choice"))
+    match ch:
+        case 1:
+            cricle()
+        case 2:
+            a=int(input("Enter the value of a :"))
+            sq(a)
+        case 3:
+            res=rect()
+            print("Area is",res)
+        case 4:
+            res1=tri()
+            l=int(input("Enter the length:"))
+            ht=int(input("Enter the ht :"))
+            print("Area is ",res1)
+        case _:
+            print("NOTHING")
+            break
